@@ -1,0 +1,145 @@
+# ─────────────────────────────────────────────────────────────
+# Fraud Detection Banking System — .gitignore
+# ─────────────────────────────────────────────────────────────
+
+# ── Python ───────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ── Virtual environments ──────────────────────────────────────
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.conda/
+
+# ── Environment variables (NEVER commit secrets) ──────────────
+.env
+.env.*
+!.env.example
+*.env
+secrets.yaml
+secrets.json
+config/local.yaml
+config/secrets.yaml
+
+# ── Data files (too large / sensitive for git) ────────────────
+data/raw/*.csv
+data/raw/*.parquet
+data/raw/*.json
+data/raw/*.xlsx
+data/processed/*.csv
+data/processed/*.parquet
+data/synthetic/*.csv
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/synthetic/.gitkeep
+
+# ── Trained model artifacts ───────────────────────────────────
+models/*.pkl
+models/*.joblib
+models/*.h5
+models/*.pt
+models/*.pth
+models/*.onnx
+models/*.json
+!models/.gitkeep
+
+# ── Jupyter Notebooks output ──────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+# Uncomment if you want to strip notebook outputs before committing:
+# notebooks/*.ipynb
+
+# ── Distribution / packaging ──────────────────────────────────
+dist/
+build/
+*.egg-info/
+*.egg
+MANIFEST
+.eggs/
+wheels/
+*.whl
+
+# ── Testing & coverage ────────────────────────────────────────
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+*.cover
+.hypothesis/
+nosetests.xml
+test-results/
+
+# ── Linting & type checking ───────────────────────────────────
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.ruff_cache/
+.pylint.d/
+
+# ── IDE & editor files ────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Logs & monitoring ─────────────────────────────────────────
+logs/
+*.log
+*.log.*
+mlflow/
+mlruns/
+wandb/
+.neptune/
+
+# ── Documentation build ───────────────────────────────────────
+docs/_build/
+docs/site/
+site/
+
+# ── Docker ───────────────────────────────────────────────────
+.dockerignore
+
+# ── OS files ─────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ── Temporary files ───────────────────────────────────────────
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.orig
+*.rej
+
+# ── Reports & outputs ─────────────────────────────────────────
+reports/*.html
+reports/*.pdf
+outputs/
+
+# ── Database files ────────────────────────────────────────────
+*.db
+*.sqlite
+*.sqlite3

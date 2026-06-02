@@ -33,6 +33,7 @@ config/local.yaml
 config/secrets.yaml
 
 # ── Data files (too large / sensitive for git) ────────────────
+data/raw/*
 data/raw/*.csv
 data/raw/*.parquet
 data/raw/*.json
